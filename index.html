@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>bootstrap!</title>
+
+    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+    <href rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/custom.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+				<a class="navbar-brand">
+					<img src="./images/logo.png">Original 計算App
+				</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="main">
+		<div class="container">
+
+			<h3 class="text-center">BMI計算</h3>
+
+			<div class="card card mb-3" style="max-width: 60rem;">
+				<div class="card-body">
+					<div class="text-center">
+						<p class="text-inner"><span>半角数字で</span>体重と身長を以下に入力してください。</p>
+						体重　<input type="number" id="num1" value="0">　kg　➗　
+						身長　<input type="number" id="num2" value="0">　cm　＝　
+						<span>（ BMIは ）　</span><span class="result ">『結果』</span><span>　です。</span><br>
+						<button class="btn btn-danger" type="button" onclick="onClick();">計算します</button>
+						<p>あなたは<span class="kekka "></span></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card card mb-3" style="max-width: 70rem;">
+				<div class="card-body">
+					<p class="text-title">〜　BMIについて　〜</p>
+					<p class="text-inner">・BMIとは「肥満度」や「痩せ」の判定に用いられる指標です。<br>
+						・BMIは 「体重(kg) ÷ 身長(m)の2乗」という計算式で求められます。<br>
+						・同じBMI値でも「脂肪がどこについているか」「筋肉による重さなのか、脂肪による重さなのか」等により、健康リスクは異なります。<br>
+						・BMIはあくまでも単純計算で求める参考値としてとらえるのが良いでしょう。<br>
+						・BMIは国際的に用いられ、肥満の判定基準は複数あります。このツールでは 日本肥満学会の分類に基づき判定をしています。<br>
+						・計算結果に表示されるアドバイスなどは 厚生労働省のBMIの解説を参考にしています。<br>
+						・一般的に、BMIは成人にのみ用いる指標としています。18歳以下の場合にはBMIではなく「肥満度」が用いられます。<br>
+						詳しくは厚生労働省の 肥満と健康をご確認ください。
+					</p>
+				</div>
+			</div>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">BML</th>
+						<th scope="col">判定</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="table-light">
+						<td>〜18.5 未満</td>
+						<td>痩せ</td>
+					</tr>
+					<tr class="table-secondary">
+						<td>18.5 〜 25 未満</td>
+						<td>普通</td>
+					</tr>
+					<tr class="table-info">
+						<td>25 〜 30 未満</td>
+						<td>肥満１度</td>
+					</tr>
+					<tr class="table-primary">
+						<td>30 〜 35 未満</td>
+						<td>肥満２度</td>
+					</tr>
+					<tr class="table-warning">
+						<td>35 〜 40 未満</td>
+						<td>肥満３度</td>
+					</tr>
+					<tr class="table-danger">
+						<td>40 〜 </td>
+						<td>肥満４度</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</main>
+
+
+	<script src="./libs/jquery/jquery-3.6.1.min.js"></script>
+	<script src="./libs/bootstrap/bootstrap.min.js"></script>
+	<script src="./main.js"></script>
+</body>
+</html>
